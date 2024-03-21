@@ -19,9 +19,8 @@ const App = () => {
       setNewTask([...newTask, newTodo.data]);
       console.log(newTask);
       setTask("");
-      
+      fetchTodos();
     }
-    fetchTodos();
   }
 
   // Asynchronous function to fetch all todos from the server.
@@ -45,6 +44,7 @@ const App = () => {
   // Asynchronous function to delete a todo item from the server.
   const deleteTodo = async (id) => {
     await axios.delete(`${API_BASE_URL}/deleteTodo/${id}`);
+    fetchTodos();
     setNewTask(newTask.filter((todo) => todo.ID !== id));
     alert("Data deleted")
   }
