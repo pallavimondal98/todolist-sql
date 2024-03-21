@@ -19,8 +19,9 @@ const App = () => {
       setNewTask([...newTask, newTodo.data]);
       console.log(newTask);
       setTask("");
-      fetchTodos();
+      
     }
+    fetchTodos();
   }
 
   // Asynchronous function to fetch all todos from the server.
