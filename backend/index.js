@@ -21,7 +21,8 @@ const db = mysql.createPool({
   host: 'roundhouse.proxy.rlwy.net',
   user: 'root',
   password: 'GyMTEbGDYAvXNkPycmJNkNgUXazgHqBq',
-  database: 'railway', //this will be the data base name in create database - in phpmyadmin
+  database: 'railway',
+  port: 34922 //this will be the data base name in create database - in phpmyadmin
 })
 
 // Express endpoint to handle POST requests for adding a new todo.
