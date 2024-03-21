@@ -18,11 +18,11 @@ app.use(cors());
 //   database: 'message' //this will be the data base name in create database - in phpmyadmin
 // })
 const db = mysql.createPool({
-  host: 'roundhouse.proxy.rlwy.net',
-  user: 'root',
-  password: 'GyMTEbGDYAvXNkPycmJNkNgUXazgHqBq',
-  database: 'railway',
-  port: 34922 //this will be the data base name in create database - in phpmyadmin
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASS,
+  database: process.env.DB, //this will be the data base name in create database - in phpmyadmin
+  port: process.env.PORT 
 })
 
 // Express endpoint to handle POST requests for adding a new todo.
